@@ -1,0 +1,160 @@
+#n-shop-container.n-shop {
+    position: absolute;
+    right: 0;
+    width: 80%;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+.n-shop .categories {
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 8px 8px 0 0;
+    flex-direction: column;
+    box-shadow: 0 0 20px 4px #0001;
+    order: 5;
+}
+
+
+.n-shop .category {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.n-shop .category svg{
+    height: 32px;
+    width: 32px;
+    color: #A9A9A9;
+}
+
+.n-shop .category.open svg {
+    color: #4c4c4c;
+}
+
+.n-shop .category-view {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 20px 4px #0001;
+    border-radius: 8px 8px 0 0;
+    height: 200px;
+    padding: 16px 0;
+}
+
+.n-shop .category-view::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+.n-shop .category-view::-webkit-scrollbar-track {
+
+}
+.n-shop .category-view::-webkit-scrollbar-thumb{
+    border: 3px solid transparent;
+    background: #0006;
+    border-radius: 12px;
+    background-clip: content-box;
+}
+.n-shop .category-view::-webkit-scrollbar-thumb:hover{
+    background-color: #000C;
+}
+
+.n-shop .item {
+    position: relative;
+    min-width: 180px;
+    width: 180px;
+    overflow: hidden;
+}
+/*.n-shop .hoverView {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    bottom: 100%;*/
+/*    background-color: #ffffff99;*/
+/*    opacity: .9;*/
+/*}*/
+/*.n-shop .item:hover .hoverView {*/
+/*    display: block;*/
+/*}*/
+
+
+
+.n-shop .item .imageVessel {
+    text-align: center;
+    pointer-events: none;
+}
+.n-shop .item.disable .imageVessel {
+    filter: grayscale(90%);
+    opacity: .4;
+}
+.n-shop .item.disable .info,
+.n-shop .item.disable .description,
+.n-shop .item.disable .priceString
+{
+    filter: grayscale(90%);
+    opacity: .4;
+}
+
+.n-shop .item .imageVessel img {
+    width: 50%;
+}
+
+
+.n-shop .rico {
+    margin: 0 8px;
+}
+
+.n-shop .item .hoverInfo {
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.n-shop .item .info {
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.n-shop .item:hover .info {
+    transform: translateY(-100%);
+    position: absolute;
+}
+
+.n-shop .item:hover .hoverInfo {
+    transform: translateY(0);
+}
+
+.n-shop .item .description {
+    font-size: 13px;
+    line-height: 150%;
+    margin: 1em 0;
+}
+
+.n-shop .item .cost {
+    font-size: 13px;
+    line-height: 150%;
+    text-align: center;
+}
+.n-shop .item .itemCounter {
+    position: absolute;
+    top:.4em;
+    right:.6em;
+    font-size: 12px;
+    color: #AAB;
+}

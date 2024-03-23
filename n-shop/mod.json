@@ -1,0 +1,11 @@
+{
+  "id": "n-shop",
+  "version": "0.0.1",
+  "js": "n-shop.js",
+  "css": [
+    "n-shop.css"
+  ],
+  "dependencies": {
+    "test": "^0.0.1"
+  }
+}
